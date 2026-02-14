@@ -272,46 +272,52 @@ body {
   }
 }
 /* MOBİL UYUMLULUK AYARLARI */
+/* MOBİL UYUMLULUK - KÖKTEN ÇÖZÜM */
 @media (max-width: 600px) {
-  .header h1 {
-    font-size: 2.2rem; /* Başlığı mobilde küçülttük */
-    padding: 0 15px;
+  body {
+    padding: 20px 0; /* Sayfanın altına üstüne boşluk */
+    justify-content: flex-start; /* Mobilde yukarıdan başlasın, taşma olmasın */
+    overflow-y: auto; /* Dikey kaydırmayı garantiye al */
   }
 
+  .header h1 {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+
+  /* Kartların mobilde sığması için */
   .container {
-    gap: 15px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Mobilde kartları alt alta dizelim, en güvenlisi bu */
+    align-items: center;
+    width: 100%;
+    gap: 20px;
   }
 
   .card {
-    width: 160px; /* Kartları mobilde biraz küçülttük */
-    height: 220px;
+    width: 85%; /* Ekran genişliğine göre boyutlan */
+    max-width: 250px;
+    height: 180px; /* Mobilde çok uzun olmasınlar */
   }
 
-  .card-front {
-    font-size: 2.5rem;
-  }
-
-  .card-back {
-    font-size: 1.1rem; /* Metinleri okunabilir seviyede tuttuk */
-    padding: 15px;
-  }
-
+  /* LILY ÇİÇEĞİ MOBİL AYARI */
   .lily-container {
-    transform: scale(
-      1
-    ); /* Mobilde çiçek çok büyük olmasın diye scale'i düşürdük */
-    margin-top: 50px;
+    transform: scale(0.85); /* Mobilde ekran dışına taşmaması için küçülttük */
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .lily-text {
-    font-size: 1.5rem;
-    padding: 0 20px;
-    line-height: 1.4;
+    font-size: 1.3rem !important; /* Yazıyı küçülttük */
+    width: 90%; /* Ekranın yanlarından taşmasın */
+    margin: 20px auto;
+    line-height: 1.3;
   }
 
-  #nextBtn {
-    width: 80%; /* Buton mobilde daha kolay tıklansın */
-    font-size: 1rem;
+  .flower {
+    left: -35px; /* Çiçeği görsel olarak merkeze çekmek için (container'dan kaynaklı kayma varsa) */
   }
 }
