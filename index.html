@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Seviyorum Çünkü... ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-content">
+        <div class="header">
+            <h1>Seni seviyom ya güzel şey 💜🖤</h1>
+            <p>Kartlara dokun bakim</p>
+        </div>
+
+        <div class="container">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">1</div>
+                    <div class="card-back"><p>Bu günü birlikte geçirememek canımı sıkıyor, seni öyle özledim ki...</p></div>
+                </div>
+            </div>
+
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">2</div>
+                    <div class="card-back"><p>Sen beni büyülüyorsun kadın. YOU ARE AMAZING BABE</p></div>
+                </div>
+            </div>
+
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">3</div>
+                    <div class="card-back"><p>Benimle sevgili olur musun güzelim?</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="nextBtn" onclick="showLily()">Senin İçin Bir Şey Var... ✨</button>
+        </div>
+    </div>
+
+    <div id="lily-section" class="hidden">
+        <div class="lily-container">
+            <div class="flower">
+                <div class="petal back-petal"></div>
+    <div class="petal back-petal"></div>
+    <div class="petal back-petal"></div>
+    
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <div class="pistil-group">
+        <div class="pistil"></div>
+        <div class="pistil"></div>
+        <div class="pistil"></div>
+    </div>
+    
+    <div class="stem"></div>
+    <div class="leaf"></div>
+            </div>
+            <h2 class="lily-text">Bugün birlike olamamaya, sana çiçek verememeye dayanamadım...</h2>
+            <h2 class="lily-text">Bu yüzden sana sanal bir zambak yapmaya çalıştım lütfen kabul et 💜🖤</h2>
+
+            <p class="sub-text">Sevgililer Günümüz Kutlu Olsun!</p>
+        </div>
+    </div>
+
+    <script>
+        function showLily() {
+            document.getElementById('main-content').classList.add('fade-out');
+            setTimeout(() => {
+                document.getElementById('main-content').style.display = 'none';
+                const lilySec = document.getElementById('lily-section');
+                lilySec.classList.remove('hidden');
+                lilySec.classList.add('fade-in');
+            }, 800);
+        }
+    </script>
+</body>
+</html>
