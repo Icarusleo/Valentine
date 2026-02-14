@@ -271,3 +271,47 @@ body {
     transform: rotate(2deg) translateY(-5px);
   }
 }
+/* MOBİL UYUMLULUK AYARLARI */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2.2rem; /* Başlığı mobilde küçülttük */
+    padding: 0 15px;
+  }
+
+  .container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 160px; /* Kartları mobilde biraz küçülttük */
+    height: 220px;
+  }
+
+  .card-front {
+    font-size: 2.5rem;
+  }
+
+  .card-back {
+    font-size: 1.1rem; /* Metinleri okunabilir seviyede tuttuk */
+    padding: 15px;
+  }
+
+  .lily-container {
+    transform: scale(
+      1
+    ); /* Mobilde çiçek çok büyük olmasın diye scale'i düşürdük */
+    margin-top: 50px;
+  }
+
+  .lily-text {
+    font-size: 1.5rem;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
+
+  #nextBtn {
+    width: 80%; /* Buton mobilde daha kolay tıklansın */
+    font-size: 1rem;
+  }
+}
